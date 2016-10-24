@@ -9,27 +9,13 @@ class Home extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
+        //console.log(nextProps);
     }
 
     render() {
-
-        let HiCompany;
-
-        if (!this.props.company.settings_account) {
-            HiCompany = (
-                <p>Loading...</p>
-            )
-        } else {
-            HiCompany = (
-                <p>Hej {this.props.company.settings_account.name} !</p>
-            )
-        }
-
         return (
             <div className="container">
-                <Header />
-                {HiCompany}
+                <Header name={ this.props.company.settings_account.name } />
             </div>
         );
     }

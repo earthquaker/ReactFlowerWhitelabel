@@ -1,4 +1,8 @@
-export default function reducer(state={}, action) {
+export default function reducer(state={
+    settings_account: {
+        name: null
+    }
+}, action) {
     switch(action.type) {
         case "GET_COMPANY": {
             state = action.payload;
