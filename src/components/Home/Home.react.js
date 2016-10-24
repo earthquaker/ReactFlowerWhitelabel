@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as companyActions from '../../actions/companyActions';
-
+import Header from './Header.react';
 class Home extends Component {
 
     componentWillMount(){
@@ -27,7 +27,8 @@ class Home extends Component {
         }
 
         return (
-            <div>
+            <div className="container">
+                <Header />
                 {HiCompany}
             </div>
         );
