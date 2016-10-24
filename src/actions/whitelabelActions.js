@@ -1,3 +1,5 @@
+import * as firebase from 'firebase';
+
 export function getWhitelabelData(id) {
     return function(dispatch) {
         const whitelabel = firebase.database().ref('whitelabel').child(id);
